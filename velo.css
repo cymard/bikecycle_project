@@ -1,0 +1,611 @@
+body,*{
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+input {
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    margin-left: 4%;
+}
+
+input[type="submit"]{
+    cursor:pointer;
+}
+
+span {
+    color: #2121af;
+}
+
+#contenu__diaporama{
+    display: flex;
+}
+
+#diaporama {
+    margin-top: 10px;
+    width: 98%;
+    height: 500px;
+}
+
+.diapositive{
+    height: 100%;
+    width: 100%;
+    margin: 0 1%;
+    display: none;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+/*parametres de base*/
+
+.diapositive p {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.diapo--text{
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    width: 30%;
+    padding: 2%;
+    /* height: 218px; */
+
+}
+
+h2{
+    font-size: 4em;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* diapo1 */
+
+#diapo1{
+    display: block;
+    background-image: url("images/bienvenu.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#diapo1--text{
+    margin-left: 60%;
+}
+
+/* diapo2 */
+
+#diapo2{
+    background-image: url("images/choisir.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#diapo2--text{
+    margin-left: 60%;
+}
+
+
+/* diapo3 */
+
+#diapo3{
+    background-image: url("images/station.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#diapo3--text{
+    margin-left: 60%;
+}
+
+/* diapo4 */
+
+#diapo4{
+    background-image: url("images/cestbon2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+#diapo4--text{
+    margin-left: 60%;
+}
+
+/*Boutons des diapos*/
+
+button{
+    width: 50px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0;
+}
+
+/* position: absolute;
+top: 40px; left: 40px; */
+
+#avancer{
+    position: absolute;
+    top: 200px;
+    right: 2%;
+    padding-left: 10px;
+}
+
+#reculer{
+    position: absolute;
+    top: 200px;
+    left: 2%;
+    padding-right: 10px;
+}
+
+/*la map*/
+/*le formulaire*/
+
+
+#corps__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.corps__container--div{
+    width: 48%;
+    margin: 0 1%;
+}
+
+#corps h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/*partie inscription*/
+
+/*partie inscription : partie haute*/
+#corps--inscription{
+    border: solid 2px black;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+#corps--inscription p{
+    font-size: 1.5em;
+}
+
+#inscription--infos{
+    height: 300px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px 10px 0px 0px; 
+}
+
+#inscription--infos p{
+    line-height: 1.5;
+    margin-left: 5%;
+}
+
+/*partie inscription : partie formulaire*/
+#inscription--formulaire{
+    height: 350px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 0px 0px 10px 10px; 
+}
+
+#formulaire-titre{
+    margin-top: 100px;
+}
+
+#formulaire-body{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#formulaire-body-inputs{
+    width: 100%;
+}
+
+#prenom {
+    margin-left: 23px;
+}
+
+#nom {
+    margin-left: 49px;
+}
+
+#formulaire-body-canvas{
+    width: 100%;
+    height: 100%;
+
+
+    background-color: rgba(115,165,209,0.5);
+    text-align: center;
+    position: absolute;
+
+    padding-top: 200px;
+
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    visibility: hidden;
+}
+
+   
+
+.formulaire--container--input{
+    display: flex;
+    margin-left: 5%;
+}
+
+.formulaire--container--input label{
+    width: auto;
+}
+
+#formulaire--container--prenom{
+    margin-bottom: 30px;
+}
+
+#pour-signer{
+    height: 30px;
+    width: 100px;
+    font-size: 1em;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+#reserver{
+    height: 30px;
+    width: 100px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin-top: 25px;
+    background-color: gray;
+}
+
+#formulaire-bouton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#bloc-signature {
+    height: 340px;
+    width: 300px;
+    margin: auto;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#fermer {
+    height: 20px;
+    width: 50px;
+    margin: 10px;
+}
+
+/* derniere partie */
+
+#message-reservation {
+    height: 200px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#message-reservation p {
+    text-align: center;
+    display: none;
+}
+
+#reservation-erreur {
+    color: red;
+    font-size: 2em;
+}
+
+/* canvas */
+
+#canvas {
+    height: 200px;
+    width: 200px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*media queries*/
+
+@media screen and (max-width: 1150px) {
+
+    #inscription--formulaire {
+        height: 300px;
+    }
+
+    #formulaire-body-inputs {
+        width: 100%;
+    }
+
+    #formulaire-body {
+        display: block;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    #formulaire--container--prenom {
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    #formulaire-body-canvas {
+        margin: auto;
+    }
+
+    #reserver {
+        margin-bottom: 10px;
+    }
+
+    .formulaire--container--input {
+        display: flex;
+        margin-bottom: 50px;
+        margin-left: 22%;
+    }
+
+    .formulaire--container--input label {
+        width: auto;
+        /* margin-right: 5%; */
+    }
+
+}
+
+@media screen and (max-width: 1001px) and (min-width: 801px) {
+    #diapo1--text {
+        margin-left: 55%;
+    }
+
+    #diapo2--text {
+        margin-left: 55%;
+    }
+
+    #diapo3--text {
+        margin-left: 55%;
+    }
+
+    #diapo4--text {
+        margin-left: 55%;
+    }
+
+    .diapositive p {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 3.5em;
+    }
+}
+
+
+/*changement vertical*/
+@media screen and (max-width: 870px){
+    #corps__container {
+        display: block;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+    
+    .corps__container--div {
+        width: 80%;
+        margin: 0 1%;
+        height: 100%;
+        margin: auto;
+    }
+
+    #formulaire-titre {
+        margin-top: 50px;
+    }
+
+    #map{
+        height: 500px;
+    }
+
+    #corps--inscription {
+        margin-top: 20px;
+    }
+
+    #diapo1--text {
+        margin-left: 50%;
+    }
+
+    #diapo2--text {
+        margin-left: 50%;
+    }
+
+    #diapo3--text {
+        margin-left: 50%;
+    }
+
+    #diapo4--text {
+        margin-left: 50%;
+    }
+
+    .diapositive p {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+    #diapo1--text {
+        margin-left: 55%;
+    }
+
+    #diapo2--text {
+        margin-left: 55%;
+    }
+
+    #diapo3--text {
+        margin-left: 55%;
+    }
+
+    #diapo4--text {
+        margin-left: 55%;
+    }
+
+    .diapositive p {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    #corps--inscription p {
+        font-size: 1.4em;
+    }
+}
+
+
+
+@media screen and (max-width: 550px){
+    h3{
+        font-size: 1.9em;
+    }
+    
+    .formulaire--container--input {
+        display: block;
+        margin-left: 5%;
+    }
+    
+    #formulaire-body-canvas {
+        height: auto;
+        width: auto;
+    }
+
+    #prenom {
+        margin-left: 4%;
+    }
+
+    #nom {
+        margin-left: 4%;
+    }
+
+    #formulaire-body-canvas{
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 500px){
+
+    #diapo1--text {
+        margin-left: 40%;
+    }
+    
+    #diapo2--text {
+        margin-left: 40%;
+    }
+    
+    #diapo3--text {
+        margin-left: 40%;
+    }
+    
+    #diapo4--text {
+        margin-left: 40%;
+    }
+    
+    .diapositive p {
+        font-size: 1.2em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .diapo--text {
+        background-color: 
+        rgba(0,0,0,0.5);
+        width: 40%;
+    }
+        
+}
+
+
+
+@media screen and (max-width: 471px){
+    
+    h3 {
+        font-size: 2.2em;
+    }
+
+    #corps--inscription p {
+        font-size: 1.2em;
+    }
+
+    #inscription--infos {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    h3 {
+        font-size: 2em;
+    }
+
+    #diapo1--text {
+        margin-left: 30%;
+    }
+    
+    #diapo2--text {
+        margin-left: 30%;
+    }
+    
+    #diapo3--text {
+        margin-left: 30%;
+    }
+    
+    #diapo4--text {
+        margin-left: 30%;
+    }
+
+    .diapo--text {
+        background-color: 
+        rgba(0,0,0,0.5);
+        width: 50%;
+    }
+/* 
+    #reserver {
+        margin-left: 35%;
+    } */
+}
+
+

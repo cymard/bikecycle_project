@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Location de vélo </title>
+        <link rel="stylesheet" href="lib/v6.1.1-dist/ol.css" type="text/css">
+        <link rel="stylesheet" href="velo.css">
+    </head>
+
+    <body>
+        <!-- le diaporama -->
+        <div id="contenu__diaporama">
+            <button id="reculer"><i class="fas fa-caret-left fa-6x"></i></button>
+            <div id="diaporama">
+                <div class="diapositive" id="diapo1">
+                    <div id="diapo1--text" class="diapo--text">
+                        <h2>Bienvenue</h2>
+                        <p>Location de vélo sur Lyon</p>
+                        <p>A votre disposition des vélos de qualités et simple d'utilisation</p>
+                    </div>
+                </div>
+
+                <div class="diapositive" id="diapo2">
+                    <div id="diapo2--text" class="diapo--text">
+                        <h2>Choisissez votre station </h2>
+                        <p>Il existe plusieurs stations dans Lyon</p>
+                        <p>Déplacez vous sur la carte et cliquez sur la station voulu</p>
+                    </div>
+                </div>
+
+                <div class="diapositive" id="diapo3">
+                    <div id="diapo3--text" class="diapo--text">
+                        <h2>Réservez votre vélo</h2>
+                        <p>Lorsque vous avez choisi votre station</p>
+                        <p>Veuillez remplir les champs (Nom, Prénom, Signature)</p>
+                    </div>
+                </div>
+
+                <div class="diapositive" id="diapo4">
+                    <div id="diapo4--text" class="diapo--text">
+                        <h2>C'est bon, votre vélo a bien été réservé !</h2>
+                    </div>
+                </div>
+
+            </div>
+            <button id="avancer"><i class="fas fa-caret-right fa-6x"></i></button>
+        </div>
+
+        <!-- la map -->
+        <section id="corps">
+            <div id="corps__container">
+
+                <div id="map" class="map corps__container--div"></div>
+
+                <div id="corps--inscription" class="corps__container--div">
+                    <div id="inscription--infos">
+                        <h3>Détails de la station</h3>
+                        <p>Etat de la station : <span id="etat-station"></span> </p>
+                        <p>Adresse : <span id="adresse"></span></p>
+                        <p>Cette station contient au total <span id="place"></span> places</p>
+                        <p> <span id="velo-disponibles"></span> vélos disponibles</p>
+                        <p> <span id="place-disponibles"></span> places disponnibles</p>
+                        <p> <span id="borne-paiement"></span> </p>
+                        
+                    </div>
+
+                
+                    <div id="inscription--formulaire">
+                        <div id="formulaire-titre">
+                            <h3>Réservation</h3>
+                        </div>
+
+                        <form id="formulaire">
+                            <div id="formulaire-body">
+                                <!-- inputs -->
+                                <div id="formulaire-body-inputs">
+                                    <div id="formulaire--container--prenom" class="formulaire--container--input">
+                                        <label for="prenom"><p>Prénom : </p></label>
+                                        <input type="text" name="prenom" placeholder="prénom" id="prenom" required>
+                                    </div>
+        
+                                    <br>
+        
+                                    <div id="formulaire--container--nom" class="formulaire--container--input">
+                                        <label for="nom"><p>Nom : </p></label>
+                                        <input type="text" name="nom" placeholder="nom" id="nom" required>
+                                    </div>
+                                </div>
+                    
+                            </div>
+
+                            <div id="formulaire-bouton">
+                                <input type="submit" id="pour-signer" value="Signer">
+                            </div>
+                        </form>
+
+
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <div id="message-reservation">
+            <p id="reservation--paragraphe">Vélo réservé à la station <span id="reservation--station"></span> par <span id="reservation--prenom"></span>  <span id="reservation--nom"></span>. <br> Temps restant <span id="reservation--temps"></span> </p>
+            <p id="reservation-erreur"></p>
+        </div>
+        
+
+
+        <div id="formulaire-body-canvas">
+            <div id="bloc-signature">
+                <button id="fermer">Fermer</button>
+                <h4>Signature : </h4>
+                <canvas id="canvas" width="200" height="200"></canvas>
+                <div>
+                    <button id="reserver">Reserver</button>
+                </div>
+            </div>
+        </div>    
+        
+
+        <script src="js/jquery-3.4.1.js"></script>
+        <script src="https://kit.fontawesome.com/9dd3a3cdbc.js" crossorigin="anonymous"></script>
+        <script src="lib/v6.1.1-dist/ol.js"></script>
+        <script src="js/velo.js" type="text/javascript"></script>
+        <script src="js/InformationReservation.js" type="text/javascript"></script>
+        <script src="js/Station.js" type="text/javascript"></script>
+        <script src="js/Diaporama.js" type="text/javascript"></script>
+        <script src="js/Map.js" type="text/javascript"></script>
+        <script src="js/Canvas.js" type="text/javascript"></script>
+        <script src="js/Minuteur.js" type="text/javascript"></script>
+    </body>
+</html>
