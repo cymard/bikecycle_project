@@ -71,7 +71,7 @@ h2{
 
 #diapo1{
     display: block;
-    background-image: url("images/bienvenu.jpg");
+    background-image: url("images/bienvenue.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +111,7 @@ h2{
 /* diapo4 */
 
 #diapo4{
-    background-image: url("images/cestbon2.jpg");
+    background-image: url("images/velos.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
